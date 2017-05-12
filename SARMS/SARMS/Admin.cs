@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SARMS
 {
-    class Admin : User
+    class Admin : Staff
     {
     }
 }
