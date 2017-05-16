@@ -21,6 +21,8 @@ namespace SARMS
             get { return _StudentList; }
             set { _StudentList = value; }
         }
-
+        public Unit(string unitID) {
+            UnitID = unitID;
+        }
     }
 }

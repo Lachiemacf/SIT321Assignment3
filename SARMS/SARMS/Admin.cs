@@ -8,5 +8,8 @@ namespace SARMS
 {
     class Admin : Staff
     {
+        public Admin(string username, string password) : base(username, password)
+        {
+        }
     }
 }

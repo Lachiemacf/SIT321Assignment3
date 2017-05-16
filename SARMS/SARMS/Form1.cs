@@ -12,6 +12,7 @@ namespace SARMS
 {
     public partial class Form1 : Form
     {
+        DB Database = new DB();
         public Form1()
         {
             InitializeComponent();
@@ -19,12 +20,15 @@ namespace SARMS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if 
+            foreach (Student username in Database.userList)
+            if (username.Username == txtUser.Text && username.Password == txtPass.Text) {
+                StudentForm frm = new StudentForm(username);
+                frm.Show();
+            }
         }
     }
 }

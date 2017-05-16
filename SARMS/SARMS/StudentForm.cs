@@ -12,9 +12,20 @@ namespace SARMS
 {
     public partial class StudentForm : Form
     {
-        public StudentForm()
+        private Student login;
+
+        public StudentForm(User Loggedin)
         {
+            login = (Student)Loggedin;
             InitializeComponent();
+        }
+
+        private void StudentForm_Load(object sender, EventArgs e)
+        {
+            txtlogin.Text = "Logged in as " + login.Username;
+            foreach (StudentRecord record in login.RecordList) {
+                lstunits.Items.Add(record.Unit.UnitID);
+            }
         }
     }
 }

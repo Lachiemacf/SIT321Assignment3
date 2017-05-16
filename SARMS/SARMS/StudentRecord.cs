@@ -8,5 +8,14 @@ namespace SARMS
 {
     class StudentRecord
     {
+        private Unit _Unit;
+        public Unit Unit
+        {
+            get { return _Unit; }
+            set { _Unit = value; }
+        }
+        public StudentRecord(Unit unit) {
+            Unit = unit;
+        }
     }
 }
