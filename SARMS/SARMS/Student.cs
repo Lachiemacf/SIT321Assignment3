@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SARMS
 {
-    class Student : User
+    public class Student : User
     {
         private List<StudentRecord> _RecordList = new List<StudentRecord>();
         public List<StudentRecord> RecordList

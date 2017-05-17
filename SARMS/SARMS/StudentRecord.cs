@@ -17,5 +17,17 @@ namespace SARMS
         public StudentRecord(Unit unit) {
             Unit = unit;
         }
+        private List<StudentGrade> _GradeList = new List<StudentGrade>();
+        public List<StudentGrade> GradeList
+        {
+            get { return _GradeList; }
+            set { _GradeList = value; }
+        }
+        private StudentAttendance _Attendance = new StudentAttendance();
+        public StudentAttendance Attendance
+        {
+            get { return _Attendance; }
+            set { _Attendance = value; }
+        }
     }
 }

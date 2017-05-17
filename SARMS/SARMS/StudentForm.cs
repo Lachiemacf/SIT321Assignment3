@@ -25,7 +25,22 @@ namespace SARMS
             txtlogin.Text = "Logged in as " + login.Username;
             foreach (StudentRecord record in login.RecordList) {
                 lstunits.Items.Add(record.Unit.UnitID);
+                
             }
+            
+        }
+
+        private void lstunits_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (StudentRecord record in login.RecordList)
+                if (record.Unit.UnitID.Equals(lstunits.SelectedItem))
+                    foreach (bool atten in record.Attendance.attendances)
+                        if (atten == true) {
+                            txtAssignments.Text += "\n" + "Present";
+                        }
+                        else {
+                            txtAssignments.Text += "\n" + "Absent";
+                        }
         }
     }
 }

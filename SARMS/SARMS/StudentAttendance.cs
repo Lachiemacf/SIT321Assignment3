@@ -8,6 +8,11 @@ namespace SARMS
 {
     class StudentAttendance
     {
-        private List<StudentGrade> _Grades;
+        private List<bool> _attendances = new List<bool>();
+        public List<bool> attendances
+        {
+            get { return _attendances; }
+            set { _attendances = value; }
+        }
     }
 }
