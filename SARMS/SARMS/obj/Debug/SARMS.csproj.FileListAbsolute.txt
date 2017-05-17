@@ -17,3 +17,6 @@ E:\Desktop\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.csproj.GenerateR
 E:\Desktop\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.exe
 E:\Desktop\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.pdb
 E:\Desktop\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.StudentForm.resources
+\\homes.deakin.edu.au\lmacfarl\UserData\Desktop\SIT321Assignment3-master\SIT321Assignment3-master\SARMS\SARMS\bin\Debug\SARMS.exe.config
+\\homes.deakin.edu.au\lmacfarl\UserData\Desktop\SIT321Assignment3-master\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.exe
+\\homes.deakin.edu.au\lmacfarl\UserData\Desktop\SIT321Assignment3-master\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.pdb

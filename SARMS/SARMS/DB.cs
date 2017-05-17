@@ -8,11 +8,17 @@ namespace SARMS
 {
     public class DB
     {
-        private List<Student> _userList = new List<Student>();
-        public List<Student> UserList
+        private List<User> _userList = new List<User>();
+        public List<User> UserList
         {
             get { return _userList; }
             set { _userList = value; }
+        }
+        private List<Unit> _unitList = new List<Unit>();
+        public List<Unit> UnitList
+        {
+            get { return _unitList; }
+            set { _unitList = value; }
         }
 
         public DB()
@@ -26,6 +32,25 @@ namespace SARMS
             lmacfarl.RecordList.Add(lmacfarlSR);
             //code for adding attendances
             UserList.Add(lmacfarl);
+        }
+        public Unit ToUnit(string inputstring) {
+            foreach (Unit unit in UnitList) {
+                if (inputstring == unit.UnitID) {
+                    return unit;
+                }
+            }
+            return null;
+        }
+        public User ToUser(string inputstring)
+        {
+            foreach (User unit in UserList)
+            {
+                if (inputstring == unit.Username)
+                {
+                    return unit;
+                }
+            }
+            return null;
         }
     }
 }

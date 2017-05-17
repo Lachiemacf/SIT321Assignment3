@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SARMS
 {
-    class Unit
+   public class Unit
     {
 
         private string _UnitID;
