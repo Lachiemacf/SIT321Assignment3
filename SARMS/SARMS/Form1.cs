@@ -12,7 +12,6 @@ namespace SARMS
 {
     public partial class Form1 : Form
     {
-        public static DB Database = new DB();
         public Form1()
         {
             InitializeComponent();
@@ -24,10 +23,21 @@ namespace SARMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Student username in Database.UserList)
+            foreach (User username in DB.UserList)
             if (username.Username == txtUser.Text && username.Password == txtPass.Text) {
-                StudentForm frm = new StudentForm(username);
-                frm.Show();
+                    if (username is Student)
+                    {
+                        StudentForm frm = new StudentForm(username);
+                    }
+                    if (username is Lecturer)
+                    {
+                        StudentForm frm = new LecturerForm(username);
+                    }
+                    if (username is Admin)
+                    {
+                        StudentForm frm = new AdminForm(username);
+                    }
+                    frm.Show();
             }
         }
     }
