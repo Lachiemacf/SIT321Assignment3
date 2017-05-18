@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace SARMS
 {
-   public class Unit
+    public class Unit
     {
 
         private string _UnitID;
         private List<Student> _StudentList;
 
-        public string UnitID {
+        public string UnitID
+        {
             get { return _UnitID; }
             set { _UnitID = value; }
         }
@@ -21,8 +22,18 @@ namespace SARMS
             get { return _StudentList; }
             set { _StudentList = value; }
         }
-        public Unit(string unitID) {
+        public Unit(string unitID)
+        {
             UnitID = unitID;
+        }
+        public static Unit FromCsv(string csvLine)
+        {
+            string[] values = csvLine.Split(',');
+
+            Unit dailyValues = new Unit("");
+            dailyValues._UnitID = values[0];
+            return dailyValues;
+
         }
     }
 }

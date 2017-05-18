@@ -22,7 +22,45 @@ namespace SARMS
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+            foreach (User User in DB.UserList)
+            {
+                if (User is Student)
+                {
+                    lststudents.Items.Add(User.Username);
+                }
+            }
+            foreach (Unit unit in DB.UnitList)
+            {
+                foreach (StudentRecord record in DB.ToStudent(lststudents.SelectedItem.ToString()).RecordList)
+                    if (record.Unit != unit)
+                    {
+                        lstunits.Items.Add(unit.UnitID);
+                    }
+            }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lststudents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (User User in DB.UserList)
+            {
+                if (User is Student)
+                {
+                    lststudents.Items.Add(User.Username);
+                }
+            }
+            foreach (Unit unit in DB.UnitList)
+            {
+                foreach (StudentRecord record in DB.ToStudent(lststudents.SelectedItem.ToString()).RecordList)
+                    if (record.Unit != unit)
+                    {
+                        lstunits.Items.Add(unit.UnitID);
+                    }
+            }
         }
     }
 }

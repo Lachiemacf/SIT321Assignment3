@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SARMS
 {
-    class StudentRecord
+    public class StudentRecord
     {
         private Unit _Unit;
         public Unit Unit

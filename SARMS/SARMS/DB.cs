@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,5 +41,23 @@ namespace SARMS
             }
             return null;
         }
+        public static Student ToStudent(string inputstring)
+        {
+            foreach (Student unit in UserList)
+            {
+                if (inputstring == unit.Username && unit is Student)
+                {
+                    return unit;
+                }
+            }
+            return null;
+        }
+            public static void LoadData()
+        {
+            _userList = File.ReadAllLines("users.csv") .Select(v => User.FromCsv(v)).ToList();
+            _unitList = File.ReadAllLines("unit.csv").Select(v => Unit.FromCsv(v)).ToList();
+        }
+
+        }
+
     }
-}

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SARMS
 {
-    class StudentGrade
+    public class StudentGrade
     {
         private double _Grade;
 

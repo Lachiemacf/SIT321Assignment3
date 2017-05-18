@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SARMS
 {
-    class StudentAttendance
+    public class StudentAttendance
     {
         private List<bool> _attendances = new List<bool>();
         public List<bool> attendances

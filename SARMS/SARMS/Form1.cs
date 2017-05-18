@@ -19,6 +19,7 @@ namespace SARMS
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            DB.LoadData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,16 +29,19 @@ namespace SARMS
                     if (username is Student)
                     {
                         StudentForm frm = new StudentForm(username);
+                        frm.Show();
                     }
                     if (username is Lecturer)
                     {
-                        StudentForm frm = new LecturerForm(username);
+                        LecturerForm frm = new LecturerForm(username);
+                        frm.Show();
                     }
                     if (username is Admin)
                     {
-                        StudentForm frm = new AdminForm(username);
+                        AdminForm frm = new AdminForm(username);
+                        frm.Show();
                     }
-                    frm.Show();
+
             }
         }
     }
