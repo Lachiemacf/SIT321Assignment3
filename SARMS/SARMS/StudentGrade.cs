@@ -29,5 +29,10 @@ namespace SARMS
             get { return _Feedback; }
             set { _Feedback = value; }
         }
+        public StudentGrade(double grade, string assignID, string feedback) {
+            _Grade = grade;
+            _AssignmentID = assignID;
+            _Feedback = feedback;
+        }
     }
 }

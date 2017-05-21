@@ -11,5 +11,15 @@ namespace SARMS
         public Staff(string username, string password) : base(username, password)
         {
         }
+        public void addGrade(Student student, Unit unit, Double grade, string asignID, string feedback) {
+
+            foreach (StudentRecord record in student.RecordList) {
+                if (record.Unit.UnitID == unit.UnitID) {
+                    StudentGrade stugrade = new StudentGrade(grade, asignID, feedback);
+                    record.GradeList.Add(stugrade);
+                }
+            }
+
+        }
     }
 }

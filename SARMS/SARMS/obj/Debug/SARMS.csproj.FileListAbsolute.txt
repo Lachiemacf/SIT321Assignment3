@@ -32,3 +32,15 @@ E:\Downloads\SIT321Assignment3-master (1)\SIT321Assignment3-master\SARMS\SARMS\o
 E:\Downloads\SIT321Assignment3-master (1)\SIT321Assignment3-master\SARMS\SARMS\bin\Debug\SARMS.exe.config
 E:\Downloads\SIT321Assignment3-master (1)\SIT321Assignment3-master\SARMS\SARMS\bin\Debug\SARMS.exe
 E:\Downloads\SIT321Assignment3-master (1)\SIT321Assignment3-master\SARMS\SARMS\bin\Debug\SARMS.pdb
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\bin\Debug\SARMS.exe.config
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\bin\Debug\SARMS.exe
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\bin\Debug\SARMS.pdb
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.csprojResolveAssemblyReference.cache
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.AdminForm.resources
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.Form1.resources
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.LecturerForm.resources
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.Properties.Resources.resources
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.StudentForm.resources
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.csproj.GenerateResource.Cache
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.exe
+E:\Downloads\SIT321Assignment3-master (2)\SIT321Assignment3-master\SARMS\SARMS\obj\Debug\SARMS.pdb

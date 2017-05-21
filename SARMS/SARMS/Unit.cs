@@ -10,8 +10,8 @@ namespace SARMS
     {
 
         private string _UnitID;
-        private List<Student> _StudentList;
-
+        private List<Student> _StudentList = new List<Student>();
+             
         public string UnitID
         {
             get { return _UnitID; }

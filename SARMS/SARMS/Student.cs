@@ -18,5 +18,9 @@ namespace SARMS
         public Student(string username, string password) : base (username,password)
         {
         }
+        public Student(Student user) : base(user)
+        {
+            _RecordList = user._RecordList;
+        }
     }
 }
