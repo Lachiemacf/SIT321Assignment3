@@ -30,9 +30,22 @@ namespace SARMS
 
         private void lstUnits_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //when a unit is selected the second listbox displays all the student in that unit
             lststuinuni.Items.Clear();
             foreach (Student stu in DB.ToUnit(lstUnits.SelectedItem.ToString()).StudentList) {
                 lststuinuni.Items.Add(stu.Username);
+            }
+        }
+
+        private void lststuinuni_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //when a new student is selected, it displays their attendance for the selected unit to a label on the GUI
+            foreach (StudentRecord record in DB.ToStudent(lststuinuni.SelectedItem.ToString()).RecordList) {
+                if (record.Unit.UnitID == lstUnits.SelectedItem.ToString()) {
+                    foreach (bool atten in record.Attendance.attendances)
+                        if (atten) { lblstuattendance.Text = "Y "; } else { lblstuattendance.Text = "N "; }
+                  
+                }
             }
         }
     }

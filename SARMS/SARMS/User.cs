@@ -32,8 +32,9 @@ namespace SARMS
         }
         public static User FromCsv(string csvLine)
         {
+            //splits all the values in the line into a string array
             string[] values = csvLine.Split(',');
-
+            //sets each value in the array to a certain property of the user, with the first one denoting the type of user
             if (values[0] == "student")
             {
                 Student dailyValues = new Student("", "");
@@ -41,6 +42,11 @@ namespace SARMS
                 dailyValues._Password = values[2];
                 StudentRecord temp = new StudentRecord(DB.ToUnit(values[3]));
                 dailyValues.RecordList.Add(temp);
+                if (!(values[4].Equals("")))
+                {
+                    StudentRecord temp2 = new StudentRecord(DB.ToUnit(values[4]));
+                    dailyValues.RecordList.Add(temp2);
+                }
                 return dailyValues;
             }
             else if (values[0] == "lecturer") {
@@ -48,7 +54,11 @@ namespace SARMS
                 dailyValues._Username = values[1];
                 dailyValues._Password = values[2];
                 dailyValues.AllocatedUnits.Add(DB.ToUnit(values[3]));
-                return dailyValues;
+                if (!(values[4].Equals("")))
+                {
+                    dailyValues.AllocatedUnits.Add(DB.ToUnit(values[4]));
+                }
+                    return dailyValues;
             }
             else if (values[0] == "admin")
             {

@@ -28,6 +28,7 @@ namespace SARMS
         }
         public static Unit FromCsv(string csvLine)
         {
+            //creates a new unit object from each value in the csv line
             string[] values = csvLine.Split(',');
 
             Unit dailyValues = new Unit("");

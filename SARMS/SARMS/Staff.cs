@@ -12,7 +12,7 @@ namespace SARMS
         {
         }
         public void addGrade(Student student, Unit unit, Double grade, string asignID, string feedback) {
-
+            //adds the grade to the selected students relevant recordList
             foreach (StudentRecord record in student.RecordList) {
                 if (record.Unit.UnitID == unit.UnitID) {
                     StudentGrade stugrade = new StudentGrade(grade, asignID, feedback);
