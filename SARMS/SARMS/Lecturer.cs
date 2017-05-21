@@ -11,5 +11,11 @@ namespace SARMS
         public Lecturer(string username, string password) : base(username, password)
         {
         }
+        private List<Unit> _AllocatedUnits = new List<Unit>();
+        public List<Unit> AllocatedUnits
+        {
+            get { return _AllocatedUnits; }
+            set { _AllocatedUnits = value; }
+        }
     }
 }

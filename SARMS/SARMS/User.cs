@@ -25,6 +25,11 @@ namespace SARMS
             _Username = username;
             _Password = password;
         }
+        public User(User user)
+        {
+            _Username = user.Username;
+            _Password = user.Password;
+        }
         public static User FromCsv(string csvLine)
         {
             string[] values = csvLine.Split(',');
@@ -42,6 +47,7 @@ namespace SARMS
                 Lecturer dailyValues = new Lecturer("", "");
                 dailyValues._Username = values[1];
                 dailyValues._Password = values[2];
+                dailyValues.AllocatedUnits.Add(DB.ToUnit(values[3]));
                 return dailyValues;
             }
             else if (values[0] == "admin")

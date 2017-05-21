@@ -54,10 +54,21 @@ namespace SARMS
         }
             public static void LoadData()
         {
-            _userList = File.ReadAllLines("users.csv") .Select(v => User.FromCsv(v)).ToList();
             _unitList = File.ReadAllLines("unit.csv").Select(v => Unit.FromCsv(v)).ToList();
+            _userList = File.ReadAllLines("users.csv") .Select(v => User.FromCsv(v)).ToList();
+            addStudents();
         }
-
+        private static void addStudents()
+        {
+            foreach (User user in _userList) {
+                if (user is Student) {
+                    Student Temp = new Student(user as Student);
+                    foreach (StudentRecord record in Temp.RecordList)
+                    {
+                        record.Unit.StudentList.Add(Temp);
+                    }
+                }
+                }
+            }
         }
-
-    }
+        }
